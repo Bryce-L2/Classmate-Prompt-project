@@ -1,0 +1,64 @@
+/*
+Bryce Lombardo
+9/24/2024
+Pranav's prompt project
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int total = 0; 
+    string start;
+    string q1;
+    string q2;
+    string q3;
+
+    cout << "Welcome to Bryces car shop!" << endl;
+    cout << "Do you want to buy car parts today?" << endl;
+    cin >> start;
+
+    if (start == "y" || start == "Y") {
+        cout << "\nDo you want to buy a Supercharging for $500.00" << endl;
+        cin >> q1;
+        if (q1 == "y" || q1 == "Y") {
+            cout << "\nSupercharger has been added to the cart." << endl;
+            total += 500;
+        } else if(q1 == "n" || q1 == "N"){
+            cout << "\nI will not add to the cart" << endl;
+        } else {
+            cout << "Not a valid input" << endl;
+        }
+
+        cout << "\nDo you want to buy an Exhaust for $250.00" << endl;
+        cin >> q2;
+        if (q2 == "y" || q2 == "Y") {
+            cout << "\nExhaust has been added to the cart." << endl;
+            total += 250;
+        } else if(q2 == "n" || q2 == "N"){
+            cout << "\nI will not add to the cart" << endl;
+        } else {
+            cout << "Not a valid input" << endl;
+        }
+        
+        cout << "\nDo you want to buy a new intake for $200.00" << endl;
+        cin >> q3;
+        if (q3 == "y" || q3 == "Y") {
+            cout << "\nIntake has been added to the cart." << endl;
+            total += 200;
+        } else if(q3 == "n" || q3 == "N"){
+            cout << "\nI will not add to the cart" << endl;
+        } else {
+            cout << "Not a valid input" << endl;
+        }
+    } else if(start == "n" ||start  == "N"){
+            
+        } else {
+            cout << "Not a valid input" << endl;
+        }
+
+    cout << "Your total is: $" << total << endl; 
+
+    return 0;
+}
